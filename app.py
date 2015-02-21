@@ -15,7 +15,7 @@ def names():
 
     lat = float(request.form['latitude']);
     lon = float(request.form['longitude']);
-    msg = "You are home"
+    msg = ""
     vibr = 0
 
     if datetime.utcnow().hour in [6]:
