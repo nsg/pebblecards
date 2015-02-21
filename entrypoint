@@ -1,0 +1,10 @@
+#!/bin/bash
+
+/usr/sbin/nginx &
+
+cd /usr/share/nginx/html
+gunicorn app:app \
+	--bind localhost:8000 \
+	--access-logfile - \
+	--error-logfile - \
+	--user www-data
